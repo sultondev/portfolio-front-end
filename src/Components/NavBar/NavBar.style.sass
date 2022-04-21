@@ -1,0 +1,59 @@
+@import "../variables.style"
+.nav
+  @include flex(space-between, center, row, wrap)
+  padding: 40px 0
+  &-logo
+    @include flex(space-between, center)
+    flex-basis: 350px
+    &__img
+      width: 60px
+      height: 60px
+
+    &__link
+      font-size: 20px
+      font-weight: 700
+      line-height: 27px
+      letter-spacing: 0em
+      text-align: left
+
+
+  
+  &-menu
+    @include flex(space-between, center, row, wrap)
+    list-style: none
+    gap: 35px
+    // flex-basis: 600px
+    &__item
+
+    &__link
+      font-size: var(--desktop-body)
+      font-weight: 500
+      line-height: 24px
+      letter-spacing: 0em
+      text-align: center
+      position: relative
+      &::after
+        content: ""
+        display: block
+        background: linear-gradient(to right, var(--clr-purple), var(--clr-blue))
+        width: 0
+        height: 0
+        position: absolute
+        bottom: -2px
+        transition: 0.4s all
+      &:hover::after
+        width: 100%
+        height: 4px
+      &-active
+        // padding: 4px 13px
+        // border: 2px solid var(--blue-30)
+        // border-radius: 6px
+
+        &::after
+          content: ""
+          display: block
+          background: linear-gradient(to right, var(--clr-purple), var(--clr-blue))
+          width: 100%
+          height: 4px
+          position: absolute
+          bottom: -2px
