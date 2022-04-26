@@ -1,0 +1,51 @@
+@import '../variables.style'
+
+.projects
+  &-pet
+    list-style: none
+    @include flex(space-between, flex-start, column)
+    // column-gap: 290px
+    // row-gap: 100px
+    gap: 100px
+    padding-top: 60px
+  
+    &__item
+      max-width: 100%
+      @include flex()
+      column-gap: 50px
+
+    &__title
+      font-size: var(--desktop-header-2)
+      font-weight: 600
+
+    &__img
+      width: 400px
+      height: 240px
+      object-fit: cover
+
+    &__desc
+      max-width: 540px
+      font-size: var(--desktop-body)
+      line-height: 30px
+
+    &__wrapper
+      @include flex(space-between, flex-start, column)
+
+.projects
+  &-btn
+    @include flex()
+    gap: 20px
+    align-self: flex-end
+    &__item
+      @include default-btn()
+      font-size: var(--desktop-header-2)
+      color: var(--clr-gray-primary)
+      &:hover
+        color: var(--clr-white)
+    &__icon
+      font-size: inherit
+      color: inherit
+      path
+        color: inherit
+        font-size: inherit
+

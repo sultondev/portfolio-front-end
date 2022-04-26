@@ -46,8 +46,7 @@ const App = () => {
 	const [ isLoading, setIsLoading ] = useRecoilState(loadingStatus);
 
 	useEffect(() => {
-		setIsLoading(true);
-		console.log(isLoading);
+		setIsLoading(false);
 	}, []);
 
 	return (

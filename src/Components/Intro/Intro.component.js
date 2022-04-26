@@ -4,7 +4,9 @@ import { loadingStatus } from '../../recoil/atom';
 export const Intro = (props) => {
 	const [ isLoading, setIsLoading ] = useRecoilState(loadingStatus);
 
-	setIsLoading(true);
+	useEffect(() => {
+		setIsLoading(false);
+	}, []);
 
 	return (
 		<main className="main">

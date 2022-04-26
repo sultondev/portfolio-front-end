@@ -5,9 +5,9 @@
     font-weight: 500
     position: relative
     display: inline
+    z-index: 10
     padding: 2px 4px
-    left: 0
-    top: 0
+
     &::before
       content: ""
       height: 100%
@@ -15,6 +15,7 @@
       position: absolute
       background: linear-gradient(to right, var(--clr-purple), var(--clr-blue))      
       left: 0
+      top: 0
       display: flex
       z-index: -1
       animation: show-up 1.6s linear

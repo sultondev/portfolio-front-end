@@ -3,7 +3,7 @@ import { useRecoilState } from 'recoil';
 import {
 	activeMenuItemData,
 	backEndSkillsData,
-	extraSkillsList,
+	// extraSkillsList,
 	frontEndSkillsData,
 	loadingStatus
 } from '../../recoil/atom';
@@ -16,11 +16,11 @@ const variants = {
 };
 
 export const Skills = () => {
-	const [ isLoading, setIsLoading ] = useRecoilState(loadingStatus);
-	const [ frontEndSkills, setFrontEndSkills ] = useRecoilState(frontEndSkillsData);
-	const [ backEndSkills, setBackEndSkills ] = useRecoilState(backEndSkillsData);
-	const [ extraSkills, setextraSkills ] = useRecoilState(extraSkillsList);
-	const [ activeItemIndex, setActiveItemIndex ] = useState(activeMenuItemData);
+	const [ , setIsLoading ] = useRecoilState(loadingStatus);
+	const [ frontEndSkills ] = useRecoilState(frontEndSkillsData);
+	const [ backEndSkills ] = useRecoilState(backEndSkillsData);
+	// const [ extraSkills ] = useRecoilState(extraSkillsList);
+	const [ , setActiveItemIndex ] = useState(activeMenuItemData);
 
 	useEffect(() => {
 		setActiveItemIndex(2);
@@ -97,7 +97,7 @@ export const Skills = () => {
 						} = data;
 						console.log(uniqueKey + id);
 						return (
-							<li className="backend-list__item" key={uniqueKey + index}>
+							<li className="backend-list__item" key={uniqueKey}>
 								<motion.div
 									initial={{ scale: 0 }}
 									animate={{ scale: 1 }}

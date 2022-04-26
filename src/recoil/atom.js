@@ -1,5 +1,6 @@
 import { atom } from 'recoil';
 import { menuItems } from '../constants';
+import { projectsData } from '../constants/projects.constant';
 import { backEndData, frontEndData, extraSkillsData } from '../constants/skills.constant';
 
 export const menuItemsData = atom({
@@ -30,4 +31,9 @@ export const extraSkillsList = atom({
 export const activeMenuItemData = atom({
 	key: 'activeMenuItemData',
 	default: 1
+});
+
+export const PetProjectsData = atom({
+	key: 'PetProjectsData',
+	default: projectsData
 });
