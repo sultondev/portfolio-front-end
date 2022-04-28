@@ -1,0 +1,45 @@
+@import "../variables.style"
+
+
+
+
+
+
+
+.main
+  height: 626px
+  @include flex(center, flex-start, column, wrap)
+  gap: 40px
+  a
+    text-decoration: underline
+  &__header
+    font-size: var(--desktop-header-1)
+    font-weight: 700
+    line-height: 68px
+    letter-spacing: 0em
+    text-align: left
+    max-width: 700px
+
+    background: linear-gradient(to bottom, var(--gradient-blue-1), var(--gradient-blue-2))
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+
+  &__subheader
+    font-size: var(--desktop-header-2)
+    font-weight: 500
+    line-height: 32px
+    letter-spacing: 0em
+    text-align: left
+    max-width: 750px
+
+
+  &-links
+    &__twitter
+      color: var(--clr-blue-primary)
+
+    &__github
+      color: var(--clr-gray-primary)
+
+    &__dribbble
+      color: var(--clr-pink-primary)
