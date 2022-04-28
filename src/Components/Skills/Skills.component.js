@@ -26,27 +26,21 @@ export const Skills = () => {
 		setActiveItemIndex(2);
 	}, []);
 
-	useEffect(() => {
-		setIsLoading(false);
-	});
+	const stopLoading = (status) => {
+		setIsLoading(status);
+	};
+
+	stopLoading(false);
+
 	return (
 		<section className="skills">
 			<div className="frontend">
 				<h2 className="frontend__header">Front-End</h2>
 				<ul className="frontend-list">
 					{frontEndSkills.map((data, index) => {
-						const {
-							id,
-							name,
-							title,
-							description,
-							icons,
-							uniqueKey,
-							iconsUniqueKeys
-						} = data;
-						console.log(uniqueKey + id);
+						const { id, title, description, icons, uniqueKey, iconsUniqueKeys } = data;
 						return (
-							<li className="frontend-list__item" key={uniqueKey + index}>
+							<li className="frontend-list__item" key={uniqueKey + id.toString()}>
 								<motion.div
 									initial={{ scale: 0 }}
 									animate={{ scale: 1 }}
@@ -56,14 +50,14 @@ export const Skills = () => {
 										damping: 36
 									}}
 								>
-									<motion.div
-										drag="x"
-										dragConstraints={{ left: -100, right: 100 }}
-										whileHover={{ scale: 1.1 }}
-										whileTap={{ scale: 0.9 }}
-										variants={variants}
-									>
-										<div className="frontend-icons__wrapper">
+									<div className="frontend-icons__wrapper" key="SxAqP">
+										<motion.div
+											drag="x"
+											dragConstraints={{ left: -100, right: 100 }}
+											whileHover={{ scale: 1.1 }}
+											whileTap={{ scale: 0.9 }}
+											variants={variants}
+										>
 											{icons.map((icon, inx) => (
 												<img
 													src={icon}
@@ -72,8 +66,8 @@ export const Skills = () => {
 													key={iconsUniqueKeys[inx] + id}
 												/>
 											))}
-										</div>
-									</motion.div>
+										</motion.div>
+									</div>
 									<h3 className="frontend-list__title">{title}</h3>
 									<p className="frontend-list__desc">{description}</p>
 								</motion.div>
@@ -86,18 +80,9 @@ export const Skills = () => {
 				<h2 className="backend__header">Back-End</h2>
 				<ul className="backend-list">
 					{backEndSkills.map((data, index) => {
-						const {
-							id,
-							name,
-							title,
-							description,
-							icons,
-							uniqueKey,
-							iconsUniqueKeys
-						} = data;
-						console.log(uniqueKey + id);
+						const { id, title, description, icons, uniqueKey, iconsUniqueKeys } = data;
 						return (
-							<li className="backend-list__item" key={uniqueKey}>
+							<li className="backend-list__item" key={uniqueKey + id.toString()}>
 								<motion.div
 									initial={{ scale: 0 }}
 									animate={{ scale: 1 }}
@@ -114,17 +99,18 @@ export const Skills = () => {
 										whileTap={{ scale: 0.9 }}
 										variants={variants}
 									>
-										<div className="backend-icons__wrapper">
+										<div className="backend-icons__wrapper" key="ACllQSSX">
 											{icons.map((icon, inx) => (
 												<img
 													src={icon}
 													alt={title}
 													className="backend-list__icons"
-													key={id}
+													key={iconsUniqueKeys[inx] + id}
 												/>
 											))}
 										</div>
 									</motion.div>
+
 									<h3 className="backend-list__title">{title}</h3>
 									<p className="backend-list__desc">{description}</p>
 								</motion.div>

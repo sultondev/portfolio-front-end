@@ -11,7 +11,6 @@ import mongoDBIcon from '../assets/icons/skills/mongodb.svg';
 import recoilJSIcon from '../assets/icons/skills/recoilJS.svg';
 import styledComponentsIcon from '../assets/icons/skills/styled-components.svg';
 import framerMotionIcon from '../assets/icons/skills/framer-motion.svg';
-import styled from 'styled-components';
 const frontEndData = [
 	{
 		id: 1,
@@ -78,7 +77,8 @@ const backEndData = [
 		title: 'Node & Express',
 		description:
 			"JavaScript moves from client-side to server-side. Seems cool, isn't it? Node.js does support data saving in the backend. With the help of Express.js, we could make an MVC pattern or modern REST API in an easy way.",
-		icons: [ nodeJSIcon, expressJSIcon ]
+		icons: [ nodeJSIcon, expressJSIcon ] ,
+		iconsUniqueKeys: ['ExxxPreeeeSSJSS']                 
 	},
 	{
 		id: 2,
@@ -87,7 +87,8 @@ const backEndData = [
 		description:
 			'Databases to build fully completed websites. All Data are stored in these technologies.',
 		title: 'Mongo DB',
-		icons: [ mongoDBIcon ]
+		icons: [ mongoDBIcon ] ,
+		iconsUniqueKeys: ['MLongAoDB']
 	}
 ];
 

@@ -1,9 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useRecoilState } from 'recoil';
 import { loadingStatus } from '../../recoil/atom';
 export const Contacts = () => {
-	const [ isLoading, setIsLoading ] = useRecoilState(loadingStatus);
+	const [ , setIsLoading ] = useRecoilState(loadingStatus);
+	const stopLoading = (status) => {
+		setIsLoading(status);
+	};
 
-		setIsLoading(false);
+	stopLoading(false);
+
 	return <section className="contacts">Contacts comming soon...</section>;
 };

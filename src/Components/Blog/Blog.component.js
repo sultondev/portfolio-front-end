@@ -1,14 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useRecoilState } from 'recoil';
 import { loadingStatus } from '../../recoil/atom';
 
 export const Blog = (props) => {
-  const [ isLoading, setIsLoading ] = useRecoilState(loadingStatus);
+	const [ , setIsLoading ] = useRecoilState(loadingStatus);
 
-		setIsLoading(false);
-	return (
-		<section className="blog">
-			Blog comming soon...
-		</section>
-	);
+	const stopLoading = (status) => {
+		setIsLoading(status);
+	};
+
+	stopLoading(false);
+
+	return <section className="blog">Blog comming soon...</section>;
 };

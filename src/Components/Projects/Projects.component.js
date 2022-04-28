@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useRecoilState } from 'recoil';
 import { motion } from 'framer-motion';
 import { loadingStatus, PetProjectsData } from '../../recoil/atom';
 import './Projects.style.sass';
 import { IconContext } from 'react-icons';
-import { FaCommentDots, FaShareSquare } from 'react-icons/fa';
+import { FaShareSquare } from 'react-icons/fa';
 import { AiFillLike } from 'react-icons/ai';
 
 // import CommentIcon from '../../assets/icons/settings/comments.svg';
@@ -16,9 +16,11 @@ export const Projects = () => {
 	const [ , setIsLoading ] = useRecoilState(loadingStatus);
 	const [ petProjects ] = useRecoilState(PetProjectsData);
 
-	useEffect(() => {
-		setIsLoading(false);
-	}, []);
+	const stopLoading = (status) => {
+		setIsLoading(status);
+	};
+
+	stopLoading(false);
 
 	return (
 		<section className="projects">
