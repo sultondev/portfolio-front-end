@@ -12,7 +12,8 @@ export const projectsData = [
 		url: 'https://food-shop.vercel.app/',
 		link: 'https://food-shop.vercel.app/',
 		imgUniqueKey: 'FoOdShOpSiTe',
-		image: FoodShopImage
+		image: FoodShopImage,
+		isLiked: false,
 	},
 	{
 		name: 'Travely',
@@ -21,7 +22,8 @@ export const projectsData = [
 		link: 'https://travely-sultondev.vercel.app/',
 		url: 'https://travely-sultondev.vercel.app/',
 		imgUniqueKey: 'TrAvElYWeBsItE',
-		image: TravelyImage
+		image: TravelyImage,
+		isLiked: false,
 	},
 	{
 		name: 'Todo List',
@@ -30,7 +32,8 @@ export const projectsData = [
 		link: 'https://todo-just-js.vercel.app/',
 		url: 'https://todo-just-js.vercel.app/',
 		imgUniqueKey: 'TdOlStWeBsIe',
-		image: TodoListImage
+		image: TodoListImage,
+		isLiked: false,
 	},
 	{
 		name: 'Star-Wars',
@@ -39,7 +42,8 @@ export const projectsData = [
 		link: 'https://star-wars-react-jade.vercel.app/',
 		url: 'https://star-wars-react-jade.vercel.app/',
 		imgUniqueKey: 'sArTwadUas',
-		image: StarWarsImage
+		image: StarWarsImage,
+		isLiked: false,
 	},
 	{
 		name: 'Ratio digital interview task',
@@ -48,6 +52,7 @@ export const projectsData = [
 		link: 'https://ratio-tasks.vercel.app/',
 		url: 'https://ratio-tasks.vercel.app/',
 		imgUniqueKey: 'ScAwSvOYY',
-		image: RatioInterviewTaskImage
+		image: RatioInterviewTaskImage,
+		isLiked: false,
 	}
 ];
